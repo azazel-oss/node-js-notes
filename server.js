@@ -1,7 +1,6 @@
 const http = require("http");
 const path = require("path");
 const fs = require("fs");
-const { resolveNaptr } = require("dns");
 
 const server = http.createServer((req, res) => {
   // if (req.url === "/") {
@@ -63,7 +62,9 @@ const server = http.createServer((req, res) => {
     case ".jpg":
       contentType = "image/jpg";
       break;
-
+    case ".ico":
+      contentType = "image/x-icon";
+      break;
     case ".png":
       contentType = "image/png";
       break;
